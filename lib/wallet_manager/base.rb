@@ -57,7 +57,7 @@ module WalletManager
     def body(params)
       return if params.nil?
 
-      [params].to_json
+      params.to_json
     end
   end
 end

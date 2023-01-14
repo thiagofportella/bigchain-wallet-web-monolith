@@ -17,6 +17,7 @@ VCR.configure do |config|
   config.cassette_library_dir = "fixtures/vcr_cassettes"
   config.hook_into :webmock
   config.configure_rspec_metadata!
+  config.filter_sensitive_data('<DEFAULT_NETWORK_URL>') { Rails.application.credentials.default_bigchain_network_url }
 end
 
 Shoulda::Matchers.configure do |config|
