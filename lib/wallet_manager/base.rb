@@ -11,7 +11,7 @@ module WalletManager
       Rails.application.credentials[:bigchain_wallet_api_url]
     end
 
-    def get(resource, header_params)
+    def get(resource, header_params: nil)
       HTTParty.get(
         build_url(resource),
         headers: request_headers(header_params),

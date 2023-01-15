@@ -1,0 +1,135 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8884/asset/915b03f4bb139004ef7bf5e7784a81262ca858142bc99fe88bd42ad6ea390311
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Network-Url:
+      - "<DEFAULT_NETWORK_URL>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Public-Key:
+      - AuVTSSLZpi4pbQmUZN1Zx41EuRNLiQ3UWgeiHxY2CfPv
+      Private-Key:
+      - 2N3adpwMwWLss3i4xfVKK4Jq1EDPXXNTSMjBNnkH7Pqy
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Werkzeug/2.2.2 Python/3.9.16
+      Date:
+      - Sun, 15 Jan 2023 04:25:39 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "amount": "910",
+          "asset_id": "915b03f4bb139004ef7bf5e7784a81262ca858142bc99fe88bd42ad6ea390311"
+        }
+  recorded_at: Sun, 15 Jan 2023 04:25:39 GMT
+- request:
+    method: get
+    uri: http://localhost:8884/asset/915b03f4bb139004ef7bf5e7784a81262ca858142bc99fe88bd42ad6ea390311
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Network-Url:
+      - "<DEFAULT_NETWORK_URL>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Public-Key:
+      - AuVTSSLZpi4pbQmUZN1Zx41EuRNLiQ3UWgeiHxY2CfPv
+      Private-Key:
+      - 2N3adpwMwWLss3i4xfVKK4Jq1EDPXXNTSMjBNnkH7Pqy
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Werkzeug/2.2.2 Python/3.9.16
+      Date:
+      - Sun, 15 Jan 2023 04:25:54 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "amount": "910",
+          "asset_id": "915b03f4bb139004ef7bf5e7784a81262ca858142bc99fe88bd42ad6ea390311"
+        }
+  recorded_at: Sun, 15 Jan 2023 04:25:54 GMT
+- request:
+    method: get
+    uri: http://localhost:8884/asset/915b03f4bb139004ef7bf5e7784a81262ca858142bc99fe88bd42ad6ea390311
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Network-Url:
+      - "<DEFAULT_NETWORK_URL>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Public-Key:
+      - AuVTSSLZpi4pbQmUZN1Zx41EuRNLiQ3UWgeiHxY2CfPv
+      Private-Key:
+      - 2N3adpwMwWLss3i4xfVKK4Jq1EDPXXNTSMjBNnkH7Pqy
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Werkzeug/2.2.2 Python/3.9.16
+      Date:
+      - Sun, 15 Jan 2023 04:26:09 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '104'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "amount": "910",
+          "asset_id": "915b03f4bb139004ef7bf5e7784a81262ca858142bc99fe88bd42ad6ea390311"
+        }
+  recorded_at: Sun, 15 Jan 2023 04:26:09 GMT
+recorded_with: VCR 6.1.0
