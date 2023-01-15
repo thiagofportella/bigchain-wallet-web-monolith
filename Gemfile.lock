@@ -125,6 +125,8 @@ GEM
     mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
     minitest (5.17.0)
+    mock_redis (0.35.0)
+      ruby2_keywords
     msgpack (1.6.0)
     multi_xml (0.6.0)
     net-imap (0.3.4)
@@ -190,11 +192,29 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.8.0)
+    redis-actionpack (5.3.0)
+      actionpack (>= 5, < 8)
+      redis-rack (>= 2.1.0, < 3)
+      redis-store (>= 1.1.0, < 2)
+    redis-activesupport (5.3.0)
+      activesupport (>= 3, < 8)
+      redis-store (>= 1.3, < 2)
+    redis-rack (2.1.4)
+      rack (>= 2.0.8, < 3)
+      redis-store (>= 1.2, < 2)
+    redis-rails (5.0.2)
+      redis-actionpack (>= 5.0, < 6)
+      redis-activesupport (>= 5.0, < 6)
+      redis-store (>= 1.2, < 2)
+    redis-store (1.9.1)
+      redis (>= 4, < 5)
     regexp_parser (2.6.1)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
+    rollout (2.5.0)
+      redis (~> 4.0)
     rspec-core (3.12.0)
       rspec-support (~> 3.12.0)
     rspec-expectations (3.12.1)
@@ -231,6 +251,7 @@ GEM
     rubocop-rspec (2.16.0)
       rubocop (~> 1.33)
     ruby-progressbar (1.11.0)
+    ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -307,12 +328,15 @@ DEPENDENCIES
   httparty
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  mock_redis
   pg (~> 1.1)
   pry
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.7)
   redis (~> 4.0)
+  redis-rails
+  rollout
   rspec-rails
   rubocop
   rubocop-rails

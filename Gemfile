@@ -13,6 +13,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'redis', '~> 4.0'
+gem 'redis-rails'
+gem 'rollout'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
@@ -35,6 +37,7 @@ end
 
 group :test do
   gem 'capybara', '>= 3.26'
+  gem 'mock_redis', require: false
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
   gem 'shoulda-matchers'
   gem 'vcr'
