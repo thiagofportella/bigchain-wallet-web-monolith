@@ -6,10 +6,13 @@ class User < ApplicationRecord
   validates :email, presence: true
 
   has_many :credentials, dependent: :destroy
-
-  attr_accessor :network_url
+  has_many :assets, dependent: :destroy
 
   def generate_credentials
     GenerateUserCredentials.call(self)
+  end
+
+  def available_public_keys
+    credentials.map(&:public_key)
   end
 end

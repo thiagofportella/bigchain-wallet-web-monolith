@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'dashboard#index'
 
   resources :credentials, only: :create
+  resources :assets, only: :create, path: 'wallet_assets', as: 'wallet_assets'
 end

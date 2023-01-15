@@ -15,6 +15,16 @@ ActiveRecord::Schema.define(version: 2023_01_15_033534) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "assets", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "bigchain_id", null: false
+    t.string "bigchain_create_transaction_id", null: false
+    t.jsonb "bigchain_create_transaction_outputs", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_assets_on_user_id"
+  end
+
   create_table "credentials", force: :cascade do |t|
     t.bigint "user_id"
     t.string "public_key", null: false
@@ -38,5 +48,6 @@ ActiveRecord::Schema.define(version: 2023_01_15_033534) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "assets", "users"
   add_foreign_key "credentials", "users"
 end
