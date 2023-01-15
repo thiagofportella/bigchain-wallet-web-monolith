@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8884/asset
+    body:
+      encoding: UTF-8
+      string: '{"amount":1,"nft":{"data":{"asset":{"nft1_code":"foobar"}}}}'
+    headers:
+      Network-Url:
+      - "<DEFAULT_NETWORK_URL>"
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+      Public-Key:
+      - AuVTSSLZpi4pbQmUZN1Zx41EuRNLiQ3UWgeiHxY2CfPv
+      Private-Key:
+      - 2N3adpwMwWLss3i4xfVKK4Jq1EDPXXNTSMjBNnkH7Pqy
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Server:
+      - Werkzeug/2.2.2 Python/3.9.16
+      Date:
+      - Sat, 14 Jan 2023 23:14:32 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '615'
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "asset_id": "48c4432e615d45da6b6bcedbe953afc704c68e07d17fd989e39786a19fdbc8ed",
+          "create_transaction_id": "48c4432e615d45da6b6bcedbe953afc704c68e07d17fd989e39786a19fdbc8ed",
+          "create_transaction_outputs": [
+            {
+              "amount": "1",
+              "condition": {
+                "details": {
+                  "public_key": "AuVTSSLZpi4pbQmUZN1Zx41EuRNLiQ3UWgeiHxY2CfPv",
+                  "type": "ed25519-sha-256"
+                },
+                "uri": "ni:///sha-256;aEonHsrpuO1Kad07tVFwphybXynbNCrYmj6BVf_i6CE?fpt=ed25519-sha-256&cost=131072"
+              },
+              "public_keys": [
+                "AuVTSSLZpi4pbQmUZN1Zx41EuRNLiQ3UWgeiHxY2CfPv"
+              ]
+            }
+          ]
+        }
+  recorded_at: Sat, 14 Jan 2023 23:14:32 GMT
+recorded_with: VCR 6.1.0

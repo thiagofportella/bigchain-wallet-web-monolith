@@ -9,9 +9,9 @@ module WalletManager
 
       def create
         {
-          asset_id: response_body['asset_id'],
-          create_transaction_id: response_body['create_transaction_id'],
-          create_transaction_outputs: response_body['create_transaction_outputs']
+          bigchain_id: response_body['asset_id'],
+          bigchain_create_transaction_id: response_body['create_transaction_id'],
+          bigchain_create_transaction_outputs: response_body['create_transaction_outputs']
         }
       end
 

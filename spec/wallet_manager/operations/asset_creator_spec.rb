@@ -9,7 +9,7 @@ RSpec.describe WalletManager::Operations::AssetCreator do
                                     private_key: '2N3adpwMwWLss3i4xfVKK4Jq1EDPXXNTSMjBNnkH7Pqy')
 
       response = described_class.new(network_url:, credentials:).create
-      expect(response[:asset_id]).to be_an_instance_of(String)
+      expect(response[:bigchain_id]).to be_an_instance_of(String)
     end
   end
 end

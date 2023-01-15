@@ -11,7 +11,7 @@ RSpec.describe WalletManager::Operations::NftCreator do
       data = { nft1_code: 'foobar' }
 
       response = described_class.new(network_url:, credentials:, data:).create
-      expect(response[:asset_id]).to be_an_instance_of(String)
+      expect(response[:bigchain_id]).to be_an_instance_of(String)
     end
   end
 end
