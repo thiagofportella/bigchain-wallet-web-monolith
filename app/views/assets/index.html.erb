@@ -1,0 +1,6 @@
+<% @assets.each do |asset| %>
+  <%= asset.bigchain_id %>
+  <%= link_to 'Saldo', wallet_asset_path(id: asset.id, asset_id: asset.bigchain_id,
+                                         credentials_id: @credentials_id,
+                                         format: :json) %>
+<% end %>

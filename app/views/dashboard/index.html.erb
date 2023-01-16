@@ -1,3 +1,18 @@
-<%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+<br>
+<br>
 
-<%= link_to 'Gerar credenciais', credentials_path(user_id: current_user.id), method: :post %>
+<!-- THIS VIEW IS AN IMPLEMENTATION MERELY FOR TEST PURPOSES. -->
+
+<%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+<%= link_to 'Gerar credenciais', credentials_path, method: :post %>
+<%= link_to 'Criar Ativo', wallet_assets_path(credentials_id: @credentials.first, amount: 10), method: :post  %>
+<%= link_to 'Ativos', wallet_assets_path(credentials_id: @credentials.first&.id) %>
+
+<%= link_to 'Transferir Assets', new_transfer_asset_path(credentials_id: @credentials.first&.id) %>
+
+<br>
+
+<% @credentials.each do |credential| %>
+  <%= credential.public_key %>
+  <br>
+<% end %>

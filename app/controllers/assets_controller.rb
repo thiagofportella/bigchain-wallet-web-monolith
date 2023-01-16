@@ -1,12 +1,19 @@
 class AssetsController < ApplicationController
+  respond_to :json, :html
+
   before_action :authenticate_user!
 
   def index
-    @assets = current_user.assets
+    @credentials_id = credentials.id
+    @assets = Asset.search_by_credentials_public_key(credentials.public_key)
   end
 
   def show
     @amount = RetrieveAssetAmountJob.perform_now(params[:asset_id], credentials:, network_url:)
+
+    respond_to do |format|
+      format.json { render json: { bigchain_id: params[:asset_id], amount: @amount } }
+    end
   end
 
   def create

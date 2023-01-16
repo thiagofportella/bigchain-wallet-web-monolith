@@ -8,7 +8,6 @@
     <%= f.text_field :name, autofocus: true, autocomplete: 'name' %>
   </div>
 
-
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -26,6 +25,14 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
+
+  <%= f.fields_for :credentials, Credential.new do |credential_subform| %>
+    <%= credential_subform.label :public_key %>
+    <%= credential_subform.text_field :public_key %>
+
+    <%= credential_subform.label :private_key %>
+    <%= credential_subform.text_field :private_key %>
+  <% end %>
 
   <div class="actions">
     <%= f.submit "Sign up" %>

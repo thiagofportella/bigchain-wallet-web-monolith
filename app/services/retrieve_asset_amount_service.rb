@@ -18,7 +18,7 @@ class RetrieveAssetAmountService
   attr_reader :bigchain_asset_id, :credentials, :network_url
 
   def retrieve
-    wallet_asset_amount['amount']
+    wallet_asset_amount[:amount]
   end
 
   def wallet_asset_amount

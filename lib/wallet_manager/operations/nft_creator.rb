@@ -20,7 +20,7 @@ module WalletManager
       attr_reader :credentials, :data
 
       def response_body
-        @response_body ||= response.body
+        @response_body ||= JSON.parse(response.body)
       end
 
       def response

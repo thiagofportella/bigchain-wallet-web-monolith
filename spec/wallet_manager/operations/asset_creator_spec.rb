@@ -6,7 +6,8 @@ RSpec.describe WalletManager::Operations::AssetCreator do
       network_url = Rails.application.credentials.default_bigchain_network_url
       credentials = instance_double(Credential,
                                     public_key: 'AuVTSSLZpi4pbQmUZN1Zx41EuRNLiQ3UWgeiHxY2CfPv',
-                                    private_key: '2N3adpwMwWLss3i4xfVKK4Jq1EDPXXNTSMjBNnkH7Pqy')
+                                    private_key: '2N3adpwMwWLss3i4xfVKK4Jq1EDPXXNTSMjBNnkH7Pqy',
+                                    id: 1)
 
       response = described_class.new(network_url:, credentials:).create
       expect(response[:bigchain_id]).to be_an_instance_of(String)

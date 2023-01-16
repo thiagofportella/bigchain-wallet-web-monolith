@@ -1,0 +1,17 @@
+<br>
+<br>
+<br>
+
+<%= form_with url: transfer_assets_path, method: :post do |form| %>
+  <%= form.collection_select :asset_id, @assets, :id, :bigchain_id %>
+
+  <%= form.label :amount, 'Quantidade:' %>
+  <%= form.number_field :amount %>
+
+  <%= form.label :recipient_public_key, 'Chave do Destinatário:' %>
+  <%= form.text_field :recipient_public_key %>
+
+  <%= form.hidden_field :credentials_id, value: @credentials.id %>
+
+  <%= form.submit 'Transferir' %>
+<% end %>

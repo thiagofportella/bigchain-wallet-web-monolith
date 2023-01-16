@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   private
 
   def configure_permitted_params
-    devise_parameter_sanitizer.permit :sign_up, keys: %i[name network_url]
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
 end

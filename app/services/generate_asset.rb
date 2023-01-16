@@ -19,7 +19,7 @@ class GenerateAsset
   attr_reader :user, :credentials, :network_url, :amount
 
   def generate
-    user.assets.create!(wallet_asset_creator)
+    credentials.assets.create!(wallet_asset_creator)
   end
 
   def wallet_asset_creator

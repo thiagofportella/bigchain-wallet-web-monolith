@@ -5,8 +5,9 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true
 
-  has_many :credentials, dependent: :destroy
-  has_many :assets, dependent: :destroy
+  has_many :credentials, dependent: :nullify
+
+  accepts_nested_attributes_for :credentials, reject_if: :all_blank
 
   def generate_credentials
     GenerateUserCredentials.call(self)
